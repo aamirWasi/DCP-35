@@ -15,8 +15,9 @@ namespace ConsoleApp1
             {
                 string line = Console.ReadLine();
                 string[] space = line.Split('\n');
-                double n = double.Parse(space[0]);
-                if (IsperfectSquare(n))
+                int num = int.Parse(space[0]);
+                bool SquarePerfect = IsperfectSquare(num);
+                if (SquarePerfect)
                 {
                     Console.WriteLine("Case {0}: YES",t);
                 }
@@ -26,7 +27,7 @@ namespace ConsoleApp1
                 }
             }
         }
-        public static bool IsperfectSquare(double n)
+        public static bool IsperfectSquare(int n)
         {
             int root = (int)Math.Sqrt(n);
             return (int)Math.Pow(root, 2) == n;
